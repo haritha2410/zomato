@@ -1,0 +1,12 @@
+in single playbook
+---------------------
+---
+- hosts: test
+  user: ansible
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: install maven and git at single playbook
+      action: yum name=maven,git state=present
+...
